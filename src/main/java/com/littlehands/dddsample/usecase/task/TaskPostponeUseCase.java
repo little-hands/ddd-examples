@@ -21,9 +21,7 @@ public class TaskPostponeUseCase {
 
   public void postponeTask(TaskId taskId) throws DomainException {
     Task task = taskRepository.findById(taskId);
-
     validatePostPoneCount(task);
-
     task.setDueDate(task.getDueDate().plusDays(1));
     task.setPostponeCount(task.getPostponeCount() + 1);
     taskRepository.save(task);

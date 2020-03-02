@@ -46,8 +46,7 @@ class TaskPostponeUseCaseTest {
     LocalDate dueDate = LocalDate.of(2020, 1, 1);
     TaskId taskId = this.prepareTask("sample", dueDate);
 
-    // when
-    // 2回延期すると
+    // when: 2回延期すると
     taskPostponeUseCase.postponeTask(taskId);
     taskPostponeUseCase.postponeTask(taskId);
 
