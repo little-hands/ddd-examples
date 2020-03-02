@@ -1,4 +1,4 @@
-package com.littlehands.dddsample.usecase.task;
+package com.littlehands.dddsample.domain.task;
 
 import com.littlehands.dddsample.domain.task.Task;
 import com.littlehands.dddsample.domain.task.TaskId;

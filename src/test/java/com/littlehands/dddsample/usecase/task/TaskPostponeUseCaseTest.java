@@ -3,6 +3,7 @@ package com.littlehands.dddsample.usecase.task;
 import com.littlehands.dddsample.domain.shared.DomainException;
 import com.littlehands.dddsample.domain.task.Task;
 import com.littlehands.dddsample.domain.task.TaskId;
+import com.littlehands.dddsample.domain.task.TaskMockRepository;
 import com.littlehands.dddsample.domain.task.TaskRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;

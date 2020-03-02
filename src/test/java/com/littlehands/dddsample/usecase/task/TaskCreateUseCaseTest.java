@@ -1,9 +1,6 @@
 package com.littlehands.dddsample.usecase.task;
 
-import com.littlehands.dddsample.domain.task.Task;
-import com.littlehands.dddsample.domain.task.TaskId;
-import com.littlehands.dddsample.domain.task.TaskRepository;
-import com.littlehands.dddsample.domain.task.TaskStatus;
+import com.littlehands.dddsample.domain.task.*;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
