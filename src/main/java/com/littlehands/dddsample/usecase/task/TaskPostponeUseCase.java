@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @Component
 @RequiredArgsConstructor
 public class TaskPostponeUseCase {
-  private static final int MAX_POSTPONE_COUNT = 2;
+  private static final int MAX_POSTPONE_COUNT = 3;
 
   @NonNull
   private TaskRepository taskRepository;
