@@ -12,18 +12,14 @@ import java.time.LocalDate;
 
 @Component
 @RequiredArgsConstructor
-public class TaskCreateUseCase {
+public class TaskPostponeUseCase {
   @NonNull
   private TaskRepository taskRepository;
 
-  public TaskId createTask(String name, LocalDate dueDate) {
-    Task task = new Task();
-    task.setTaskId(new TaskId());
-    task.setName(name);
-    task.setDueDate(dueDate);
-    task.setTaskStatus(TaskStatus.UNDONE);
-    task.setPostponeCount(0);
+  public void postponeTask(TaskId taskId) {
+    Task task = taskRepository.findById(taskId);
+    task.setDueDate(task.getDueDate().plusDays(1));
+    task.setPostponeCount(task.getPostponeCount() + 1);
     taskRepository.save(task);
-    return task.getTaskId();
   }
 }
