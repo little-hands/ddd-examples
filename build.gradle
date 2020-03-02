@@ -8,6 +8,8 @@ group = 'com.littlehands'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
+apply plugin: 'groovy'
+
 configurations {
 	developmentOnly
 	runtimeClasspath {
@@ -31,8 +33,16 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+
+
+
+
 }
 
 test {
 	useJUnitPlatform()
+
+	testLogging {
+		events "passed", "skipped", "failed"
+	}
 }
