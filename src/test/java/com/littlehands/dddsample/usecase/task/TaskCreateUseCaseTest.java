@@ -1,8 +1,10 @@
 package com.littlehands.dddsample.usecase.task;
 
 import com.littlehands.dddsample.domain.task.*;
+import com.littlehands.dddsample.domain.user.UserId;
 import com.littlehands.dddsample.domain.user.UserMockRepository;
 import com.littlehands.dddsample.domain.user.UserRepository;
+import com.littlehands.dddsample.usecase.user.UserCreateUseCase;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -14,11 +16,13 @@ class TaskCreateUseCaseTest {
   private UserRepository userRepository;
   private TaskRepository taskRepository;
   private TaskCreateUseCase taskCreateUseCase;
+  private UserCreateUseCase userCreateUseCase;
 
   TaskCreateUseCaseTest() {
     this.userRepository = new UserMockRepository();
     this.taskRepository = new TaskMockRepository();
     this.taskCreateUseCase = new TaskCreateUseCase(this.taskRepository, this.userRepository);
+    this.userCreateUseCase = new UserCreateUseCase(this.userRepository);
   }
 
   @Test
