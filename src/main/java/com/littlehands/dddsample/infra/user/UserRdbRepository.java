@@ -6,7 +6,7 @@ import com.littlehands.dddsample.domain.user.UserRepository;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserTempRepository implements UserRepository {
+public class UserRdbRepository implements UserRepository {
   @Override
   public User findById(UserId userId) {
     return null;

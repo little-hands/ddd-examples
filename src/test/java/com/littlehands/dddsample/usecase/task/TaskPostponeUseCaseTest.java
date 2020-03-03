@@ -5,6 +5,8 @@ import com.littlehands.dddsample.domain.task.Task;
 import com.littlehands.dddsample.domain.task.TaskId;
 import com.littlehands.dddsample.domain.task.TaskMockRepository;
 import com.littlehands.dddsample.domain.task.TaskRepository;
+import com.littlehands.dddsample.domain.user.UserMockRepository;
+import com.littlehands.dddsample.domain.user.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
@@ -12,13 +14,15 @@ import java.time.LocalDate;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class TaskPostponeUseCaseTest {
-  private TaskPostponeUseCase taskPostponeUseCase;
+  private UserRepository userRepository;
   private TaskRepository taskRepository;
+  private TaskPostponeUseCase taskPostponeUseCase;
 
   TaskPostponeUseCaseTest() {
+    this.userRepository = new UserMockRepository();
     this.taskRepository = new TaskMockRepository();
     this.taskPostponeUseCase = new TaskPostponeUseCase(this.taskRepository);
   }
@@ -39,24 +43,6 @@ class TaskPostponeUseCaseTest {
     assertThat(postponedTask.getDueDate(), is(dueDate.plusDays(1)));
     // 延期回数が1増えている
     assertThat(postponedTask.getPostponeCount(), is(1));
-  }
-
-  @Test
-  void postponeTaskTest_success_postpone3times() throws DomainException {
-    // given
-    LocalDate dueDate = LocalDate.of(2020, 1, 1);
-    TaskId taskId = this.prepareTask("sample", dueDate);
-
-    // when: 3回延期すると
-    taskPostponeUseCase.postponeTask(taskId);
-    taskPostponeUseCase.postponeTask(taskId);
-    taskPostponeUseCase.postponeTask(taskId);
-
-    // then
-    Task postponedTask = taskRepository.findById(taskId);
-    // 期日、延期際数がそれぞれ3増えている　
-    assertThat(postponedTask.getDueDate(), is(dueDate.plusDays(3)));
-    assertThat(postponedTask.getPostponeCount(), is(3));
   }
 
   @Test
@@ -82,7 +68,7 @@ class TaskPostponeUseCaseTest {
   // private methods
 
   private TaskId prepareTask(String name, LocalDate dueDate) {
-    return new TaskCreateUseCase(this.taskRepository)
+    return new TaskCreateUseCase(this.taskRepository, this.userRepository)
         .createTask(name, dueDate);
   }
 }

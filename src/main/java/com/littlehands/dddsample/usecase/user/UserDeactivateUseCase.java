@@ -10,14 +10,14 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class UserCreateUseCase {
+public class UserDeactivateUseCase {
   @NonNull
   private UserRepository userRepository;
 
-  public UserId createUser(String userName) {
-    User user = new User(userName);
+  public void deactivateUser(UserId userId) {
+    User user = userRepository.findById(userId);
+    user.deactivate();
     userRepository.save(user);
-    return user.getUserId();
   }
 
 }

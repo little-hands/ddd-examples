@@ -4,12 +4,9 @@ import com.littlehands.dddsample.domain.shared.DomainException;
 import com.littlehands.dddsample.domain.task.Task;
 import com.littlehands.dddsample.domain.task.TaskId;
 import com.littlehands.dddsample.domain.task.TaskRepository;
-import com.littlehands.dddsample.domain.task.TaskStatus;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-
-import java.time.LocalDate;
 
 @Component
 @RequiredArgsConstructor

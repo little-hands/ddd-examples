@@ -6,7 +6,7 @@ import com.littlehands.dddsample.domain.task.TaskRepository;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TaskTempRepository implements TaskRepository {
+public class TaskRdbRepository implements TaskRepository {
   @Override
   public Task findById(TaskId taskId) {
     return null;

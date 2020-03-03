@@ -1,6 +1,8 @@
 package com.littlehands.dddsample.usecase.task;
 
 import com.littlehands.dddsample.domain.task.*;
+import com.littlehands.dddsample.domain.user.UserMockRepository;
+import com.littlehands.dddsample.domain.user.UserRepository;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -9,12 +11,14 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 class TaskCreateUseCaseTest {
-  private TaskCreateUseCase taskCreateUseCase;
+  private UserRepository userRepository;
   private TaskRepository taskRepository;
+  private TaskCreateUseCase taskCreateUseCase;
 
   TaskCreateUseCaseTest() {
+    this.userRepository = new UserMockRepository();
     this.taskRepository = new TaskMockRepository();
-    this.taskCreateUseCase = new TaskCreateUseCase(this.taskRepository);
+    this.taskCreateUseCase = new TaskCreateUseCase(this.taskRepository, this.userRepository);
   }
 
   @Test

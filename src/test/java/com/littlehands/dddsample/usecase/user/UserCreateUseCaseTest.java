@@ -1,10 +1,7 @@
 package com.littlehands.dddsample.usecase.user;
 
 import com.littlehands.dddsample.domain.user.*;
-import com.littlehands.dddsample.usecase.user.UserCreateUseCase;
 import org.junit.jupiter.api.Test;
-
-import java.time.LocalDate;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
