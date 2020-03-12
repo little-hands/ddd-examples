@@ -7,6 +7,9 @@ import com.littlehands.task_management.good_example.domain.task.TaskRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+/**
+ * リファクタ前のコードは{@link com.littlehands.task_management.bad_example.usecase.task.TaskPostponeUseCase}参照
+ */
 @Component
 @RequiredArgsConstructor
 public class TaskPostponeUseCase {

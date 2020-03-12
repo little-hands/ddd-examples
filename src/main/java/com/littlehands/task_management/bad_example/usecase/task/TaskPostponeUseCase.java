@@ -8,6 +8,9 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+/**
+ * リファクタ後のコードは{@link com.littlehands.task_management.good_example.usecase.task.TaskPostponeUseCase}参照
+ */
 @Component
 @RequiredArgsConstructor
 public class TaskPostponeUseCase {

@@ -8,6 +8,10 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * リファクタ後のクラブクラス
+ * リファクタ前のコードは{@link com.littlehands.aggregate.bad_example.domain.club.Club}参照
+ */
 @Getter
 @Setter
 public class Club {

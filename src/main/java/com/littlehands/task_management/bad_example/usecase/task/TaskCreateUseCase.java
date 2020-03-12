@@ -11,6 +11,9 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
+/**
+ * リファクタ後のコードは{@link com.littlehands.task_management.good_example.usecase.task.TaskCreateUseCase}参照
+ */
 @Component
 @RequiredArgsConstructor
 public class TaskCreateUseCase {

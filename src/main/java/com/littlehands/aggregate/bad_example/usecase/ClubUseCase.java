@@ -11,6 +11,10 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
+/**
+ * リファクタ前のユースケースクラス
+ * リファクタ後のコードは{@link com.littlehands.aggregate.good_example.usecase.ClubUseCase}参照
+ */
 @RequiredArgsConstructor
 public class ClubUseCase {
   private final ClubDao clubDao;

@@ -6,6 +6,10 @@ import com.littlehands.aggregate.good_example.domain.club.ClubRepository;
 import com.littlehands.aggregate.good_example.domain.student.StudentId;
 import lombok.RequiredArgsConstructor;
 
+/**
+ * リファクタ後のユースケースクラス
+ * リファクタ前のコードは{@link com.littlehands.aggregate.bad_example.usecase.ClubUseCase}参照
+ */
 @RequiredArgsConstructor
 public class ClubUseCase {
   private final ClubRepository clubRepository;
