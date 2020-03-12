@@ -13,10 +13,8 @@ import java.util.List;
 
 @RequiredArgsConstructor
 public class ClubUseCase {
-
   private final ClubDao clubDao;
   private final ClubStudentDao clubStudentDao;
-
 
   /**
    * クラブに生徒を登録します
@@ -24,13 +22,12 @@ public class ClubUseCase {
   public void addStudent(ClubId clubId, StudentId studentId) {
     boolean isRegistered = clubStudentDao.findById(clubId, studentId).isPresent();
     if (isRegistered) {
-      return; // 登録済みの場合
+      throw new UseCaseException("登録済みの生徒です");
     }
     // 未登録なら新しくクラブに生徒を登録する
     ClubStudent clubStudent = new ClubStudent(clubId, studentId);
     clubStudentDao.save(clubStudent);
   }
-
 
   private static final int MINIMUM_APPROVE_STUDENT_NUMBER = 5;
 

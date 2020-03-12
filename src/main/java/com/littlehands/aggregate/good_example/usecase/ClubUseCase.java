@@ -8,9 +8,7 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public class ClubUseCase {
-
   private final ClubRepository clubRepository;
-
 
   /**
    * クラブに生徒を登録します
@@ -29,7 +27,6 @@ public class ClubUseCase {
     club.approve();
     clubRepository.save(club);
   }
-
 
   /**
    * クラブから生徒を退会させます
