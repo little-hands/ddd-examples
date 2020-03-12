@@ -1,7 +1,7 @@
-package com.littlehands.aggregate_sample.bad_example1.domain.club_student;
+package com.littlehands.aggregate_sample.bad_example.domain.club_student;
 
-import com.littlehands.aggregate_sample.bad_example1.domain.club.ClubId;
-import com.littlehands.aggregate_sample.bad_example1.domain.student.StudentId;
+import com.littlehands.aggregate_sample.bad_example.domain.club.ClubId;
+import com.littlehands.aggregate_sample.bad_example.domain.student.StudentId;
 import lombok.Getter;
 
 /**

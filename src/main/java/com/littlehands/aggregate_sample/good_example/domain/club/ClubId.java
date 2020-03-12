@@ -1,10 +1,10 @@
-package com.littlehands.aggregate_sample.bad_example1.domain.student;
+package com.littlehands.aggregate_sample.good_example.domain.club;
 
 import java.util.UUID;
 
-public class StudentId {
+public class ClubId {
   private String value;
-  public StudentId() {
+  public ClubId() {
     this.value = UUID.randomUUID().toString();
   }
   public String stringValue() {

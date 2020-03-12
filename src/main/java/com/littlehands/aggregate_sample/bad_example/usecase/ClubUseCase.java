@@ -1,12 +1,12 @@
-package com.littlehands.aggregate_sample.bad_example1.usecase;
+package com.littlehands.aggregate_sample.bad_example.usecase;
 
-import com.littlehands.aggregate_sample.bad_example1.domain.club.Club;
-import com.littlehands.aggregate_sample.bad_example1.domain.club.ClubDao;
-import com.littlehands.aggregate_sample.bad_example1.domain.club.ClubId;
-import com.littlehands.aggregate_sample.bad_example1.domain.club.ClubStatus;
-import com.littlehands.aggregate_sample.bad_example1.domain.club_student.ClubStudent;
-import com.littlehands.aggregate_sample.bad_example1.domain.club_student.ClubStudentDao;
-import com.littlehands.aggregate_sample.bad_example1.domain.student.StudentId;
+import com.littlehands.aggregate_sample.bad_example.domain.club.Club;
+import com.littlehands.aggregate_sample.bad_example.domain.club.ClubDao;
+import com.littlehands.aggregate_sample.bad_example.domain.club.ClubId;
+import com.littlehands.aggregate_sample.bad_example.domain.club.ClubStatus;
+import com.littlehands.aggregate_sample.bad_example.domain.club_student.ClubStudent;
+import com.littlehands.aggregate_sample.bad_example.domain.club_student.ClubStudentDao;
+import com.littlehands.aggregate_sample.bad_example.domain.student.StudentId;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;

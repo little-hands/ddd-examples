@@ -1,6 +1,6 @@
-package com.littlehands.aggregate_sample.bad_example1.domain.club;
+package com.littlehands.aggregate_sample.bad_example.domain.club;
 
-import com.littlehands.aggregate_sample.bad_example1.domain.Dao;
+import com.littlehands.aggregate_sample.bad_example.domain.Dao;
 
 public class ClubDao implements Dao<Club, ClubId> {
   @Override

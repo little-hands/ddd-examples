@@ -1,4 +1,4 @@
-package com.littlehands.aggregate_sample.bad_example1.domain.student;
+package com.littlehands.aggregate_sample.good_example.domain.student;
 
 import lombok.Getter;
 

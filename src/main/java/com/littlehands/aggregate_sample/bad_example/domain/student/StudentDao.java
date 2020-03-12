@@ -1,6 +1,6 @@
-package com.littlehands.aggregate_sample.bad_example1.domain.student;
+package com.littlehands.aggregate_sample.bad_example.domain.student;
 
-import com.littlehands.aggregate_sample.bad_example1.domain.Dao;
+import com.littlehands.aggregate_sample.bad_example.domain.Dao;
 
 public class StudentDao implements Dao<Student, StudentId> {
   @Override
