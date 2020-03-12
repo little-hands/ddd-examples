@@ -21,9 +21,7 @@ public class TaskCreateUseCase {
     Task task = new Task(taskName);
     taskRepository.save(task);
 
-    TaskAssignedNotifyMail notifyMail
-        = new TaskAssignedNotifyMail(task, user);
-
+    TaskAssignedNotifyMail notifyMail = new TaskAssignedNotifyMail(task, user);
     emailSender.send(notifyMail);
 
   }
