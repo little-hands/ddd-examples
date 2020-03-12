@@ -5,6 +5,10 @@ import lombok.Getter;
 
 import java.time.LocalDate;
 
+/**
+ * リファクタ後のタスククラス
+ * リファクタ前のコードは{@link com.littlehands.task_management.bad_example.domain.task.Task}参照
+ */
 @Getter
 public class Task {
   private TaskId taskId;
