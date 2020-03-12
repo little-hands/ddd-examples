@@ -34,6 +34,8 @@ dependencies {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
 
+    compile group: 'com.amazonaws', name: 'aws-java-sdk-ses', version: '1.11.741'
+
 
 }
 
