@@ -1,0 +1,32 @@
+@startuml
+skinparam packageStyle rectangle
+skinparam	ArrowColor Black
+skinparam object {
+  BorderColor Black
+  BackgroundColor white
+}
+skinparam note {
+  BorderColor Black
+  BackgroundColor white
+}
+
+
+object 部テーブル {
+  部ID
+  名前
+  承認状態
+}
+
+object 生徒テーブル {
+  生徒ID
+  名前
+}
+
+object 部ー生徒テーブル{
+  部ID
+  生徒ID
+}
+部ー生徒テーブル -u-> 部テーブル
+部ー生徒テーブル -r-> 生徒テーブル
+
+@enduml
