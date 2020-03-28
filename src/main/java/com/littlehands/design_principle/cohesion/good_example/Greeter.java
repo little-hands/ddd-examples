@@ -1,4 +1,4 @@
-package com.littlehands.design_principle.good_example;
+package com.littlehands.design_principle.cohesion.good_example;
 
 class Greeter {
   private static final String GREET_MESSAGE = "hello.";

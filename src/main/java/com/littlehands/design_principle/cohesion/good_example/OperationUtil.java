@@ -1,4 +1,4 @@
-package com.littlehands.design_principle.good_example;
+package com.littlehands.design_principle.cohesion.good_example;
 
 class OperationUtil { // 責務が曖昧なクラス名
   private int count = 0;

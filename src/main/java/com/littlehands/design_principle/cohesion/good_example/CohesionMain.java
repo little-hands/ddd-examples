@@ -1,4 +1,4 @@
-package com.littlehands.design_principle.good_example;
+package com.littlehands.design_principle.cohesion.good_example;
 
 
 public class CohesionMain {
