@@ -1,4 +1,4 @@
-package com.littlehands.design_principle.coupring.good_example;
+package com.littlehands.design_principle.coupring.basic.good_example;
 
 public class CouplingMain {
   public static void main(String[] args) {

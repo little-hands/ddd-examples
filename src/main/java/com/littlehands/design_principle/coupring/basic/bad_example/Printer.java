@@ -1,4 +1,4 @@
-package com.littlehands.design_principle.coupring.bad_example;
+package com.littlehands.design_principle.coupring.basic.bad_example;
 
 class Printer {
   static void print() {
