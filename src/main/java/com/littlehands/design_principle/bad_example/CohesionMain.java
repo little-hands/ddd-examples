@@ -1,7 +1,7 @@
-package com.littlehands.cohesion.bad_example;
+package com.littlehands.design_principle.bad_example;
 
 
-public class Main {
+public class CohesionMain {
   public static void main(String[] args) {
     OperationUtil operationUtil = new OperationUtil();
     operationUtil.increment();
