@@ -7,5 +7,4 @@ public class SOutPrinter implements Printer {
   public void printCounter(Counter counter) {
     System.out.println(counter.getNumber());
   }
-
 }

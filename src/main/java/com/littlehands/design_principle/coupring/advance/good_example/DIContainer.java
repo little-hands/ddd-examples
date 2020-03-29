@@ -11,5 +11,4 @@ class DIContainer {
       return new SOutPrinter();
     }
   }
-
 }

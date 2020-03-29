@@ -13,12 +13,12 @@ public class FilePrinter implements Printer {
   @Override
   public void printCounter(Counter counter) {
     String printStr = Integer.toString(counter.getNumber());
-    PrintWriter printWriter = CreatePrintWriter();
+    PrintWriter printWriter = createPrintWriter();
     printWriter.println(printStr);
     printWriter.close();
   }
 
-  private PrintWriter CreatePrintWriter() {
+  private PrintWriter createPrintWriter() {
     try {
       FileWriter fileWriter = new FileWriter(FILE_NAME, true);
       return new PrintWriter(fileWriter);

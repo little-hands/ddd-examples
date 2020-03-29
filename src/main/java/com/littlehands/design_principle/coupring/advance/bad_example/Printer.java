@@ -2,6 +2,7 @@ package com.littlehands.design_principle.coupring.advance.bad_example;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 class Printer {
   private static final String FILE_NAME = "test.txt";
@@ -14,13 +15,17 @@ class Printer {
   }
 
   private void printToFile(String str) {
-    try {
+    PrintWriter printWriter = createPrintWriter();
+    printWriter.println(str);
+    printWriter.close();
+  }
 
-      FileWriter fw = new FileWriter(FILE_NAME);
-      fw.write(str);
-      fw.close();
-    } catch (IOException ex) {
-      ex.printStackTrace();
+  private PrintWriter createPrintWriter() {
+    try {
+      FileWriter fileWriter = new FileWriter(FILE_NAME, true);
+      return new PrintWriter(fileWriter);
+    } catch (IOException e) {
+      throw new RuntimeException(e);
     }
   }
 }
