@@ -23,7 +23,7 @@ public class EvilTaskUseCase {
 //  }
 //
 //  public void evilPostponeTask(TaskId taskId) {
-//    Task task = taskRepository.findById(taskId);
+//    Task task = taskRepository.findByBillIdAndUserId(taskId);
 //    task.setDueDate(task.getDueDate().plusDays(100)); // × いきなり100日延期
 //    task.setPostponeCount(task.getPostponeCount() + 1); // × 延期回数を更新しない
 //    taskRepository.save(task);

@@ -25,7 +25,9 @@ repositories {
 }
 
 dependencies {
+    compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.2.6.RELEASE'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
