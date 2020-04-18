@@ -1,0 +1,36 @@
+@startuml
+' 以下の質問に対するサンプルドメインモデル図
+' https://peing.net/ja/q/3c1ab13a-265e-4c71-b3cb-ab9960433a9a
+skinparam packagestyle rectangle
+
+package  ユーザー集約 {
+  object ユーザー{
+    ユーザーID
+  }
+}
+
+package タスク集約 {
+  object タスク{
+    タスクID
+  }
+}
+
+
+package ユーザー担当タスク集約 {
+  object ユーザー担当タスク{
+    ユーザーID
+    タスクID
+  }
+}
+ユーザー担当タスク "0..1" --> "1" ユーザー
+ユーザー担当タスク "0..1" --> "1" タスク
+
+note right of ユーザー担当タスク
+  1ユーザーに対して必ず1つ
+  タスクを担当していない時はタスクIDがnullになる
+  すでにタスクを担当している時に
+   新しいタスクを設定することはできない
+end note
+
+
+@enduml
