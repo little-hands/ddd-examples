@@ -1,6 +1,7 @@
 package com.littlehands.billing.domain.bill;
 
-import com.sun.tools.javac.util.List;
+import com.littlehands.billing.domain.user.UserId;
+import java.util.List;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
@@ -8,7 +9,7 @@ import java.util.Optional;
 @Component
 class BillRdbRepository implements BillRepository {
   @Override
-  public Optional<Bill> findByBillIdAndUserId(BillId billId) {
+  public Optional<Bill> findByBillIdAndUserId(BillId billId, UserId userId) {
     // TODO: ここでBILLテーブルとBILL_DETAILデーブルをSQLで取得して、再構成用のコンストラクタでBIllオブジェクトのインスタンスを生成する
     Bill bill = new Bill(
         new BillId("id_from_SQL"),
@@ -16,6 +17,7 @@ class BillRdbRepository implements BillRepository {
         List.of(new BillDetail(new BillDetailId("id_from_SQL"), "detail_title_from_SQL", 0)));
     return Optional.of(bill);
   }
+
 
   @Override
   public void insert(Bill bill) {
