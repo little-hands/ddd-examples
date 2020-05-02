@@ -1,4 +1,6 @@
 package com.littlehands.tdd_sample;
 
-public class FizzBuzz {
+class FizzBuzz {
+  void execute() {
+  }
 }

@@ -2,13 +2,12 @@ package com.littlehands.tdd_sample;
 
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 class FizzBuzzTest {
+  private FizzBuzz fizzBuzz = new FizzBuzz();
+
   @Test
-  void sampleTest() {
-    FizzBuzz fizzBuzz = new FizzBuzz();
-    assertThat(fizzBuzz).isNotNull();
+  void test_fizzBuzz(int input, String output) {
+    fizzBuzz.execute();
   }
 
 }

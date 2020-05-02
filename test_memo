@@ -1,0 +1,52 @@
+package com.littlehands.tdd_sample;
+
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
+
+
+class IssueFactoryTestMemo {
+
+  static Stream<TestData> testData() {
+    return Stream.of(
+        data("質問です",
+            "回答です",
+            "## Question\n> 質問です\n\n## Answer\n回答です"),
+
+        data("質問です\n実は。。",
+            "回答です",
+            "## Question\n> 質問です\n> 実は。。\n\n## Answer\n回答です"),
+
+        data("質問です\r\n実は。。",
+            "回答です",
+            "## Question\n> 質問です\n> 実は。。\n\n## Answer\n回答です")
+    );
+  }
+
+  static TestData data(String question, String answer, String result) {
+    return new TestData(question, answer, result);
+  }
+
+  @ParameterizedTest
+  @MethodSource("testData")
+  void test_create(TestData data) {
+    String issue = IssueFactory.create(data.question, data.answer);
+    assertThat(issue, is(data.result));
+  }
+}
+
+class TestData {
+  String question;
+  String answer;
+  String result;
+
+  TestData(String question, String answer, String result) {
+    this.question = question;
+    this.answer = answer;
+    this.result = result;
+  }
+}
