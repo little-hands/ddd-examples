@@ -5,8 +5,7 @@ class IssueFactory {
   }
 
   public static void main(String[] args) {
-    String input = args[0];
-    System.out.println(input);
-    IssueFactory.create();
+    String question = args[0];
+    String answer = args[1];
   }
 }
