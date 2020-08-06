@@ -16,7 +16,7 @@ class TaskTest {
   @Nested
   class ConstructorTest {
     @Test
-    protected void タスク新規作成時() {
+    protected void タスク新規作成() {
       // when: タスク名と期日を指定してタスクを生成すると
       String taskName = "タスク名";
       LocalDate dueDate = LocalDate.of(2020, 8, 1);
