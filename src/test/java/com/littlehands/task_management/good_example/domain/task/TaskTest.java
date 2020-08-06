@@ -36,7 +36,7 @@ class TaskTest {
   @Nested
   class PostponeTest {
     @Test
-    protected void タスク延期1回目が成功し_延期回数が1増えて期日が1日後になること() {
+    protected void タスク延期1回目が成功し_延期回数が1増えて期日が1日後になる() {
       // given: 延期回数0回のタスク
       LocalDate dueDate = LocalDate.of(2020, 8, 1);
       Task task = new Task("taskName", dueDate);
@@ -50,7 +50,7 @@ class TaskTest {
     }
 
     @Test
-    protected void タスクの4回目の延期が失敗すること() {
+    protected void タスクの4回目の延期が失敗する() {
       // given: 3回延期されているタスク
       LocalDate dueDate = LocalDate.of(2020, 8, 1);
       Task task = new Task("taskName", dueDate);
@@ -70,7 +70,7 @@ class TaskTest {
   @Nested
   class DoneTest {
     @Test
-    protected void タスクを完了させるとステータスが完了状態になること() {
+    protected void タスクを完了させるとステータスが完了状態になる() {
       // given: 新規生成状態のタスク
       Task task = new Task("taskName", LocalDate.now());
 
