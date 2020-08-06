@@ -11,8 +11,8 @@ import java.time.LocalDate;
  */
 @Getter
 public class Task {
-  private TaskId taskId;
-  private String name;
+  private final TaskId taskId;
+  private final String name;
   private TaskStatus taskStatus;
   private int postponeCount;
   private LocalDate dueDate;
@@ -25,10 +25,20 @@ public class Task {
     this.postponeCount = 0;
   }
 
+  /**
+   * タスクを延期します
+   */
   public void postpone() {
     validatePostPoneCount();
     this.dueDate = this.dueDate.plusDays(1);
     this.postponeCount = this.postponeCount + 1;
+  }
+
+  /**
+   * タスクを完了します
+   */
+  public void done() {
+    this.taskStatus = TaskStatus.DONE;
   }
 
   private static final int MAX_POSTPONE_COUNT = 3;

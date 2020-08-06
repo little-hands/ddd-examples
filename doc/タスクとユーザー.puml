@@ -1,0 +1,34 @@
+@startuml
+' 以下の質問に対するサンプルドメインモデル図
+' https://peing.net/ja/q/3c1ab13a-265e-4c71-b3cb-ab9960433a9a
+skinparam packagestyle rectangle
+
+package  ユーザー集約 {
+  object ユーザー{
+    ユーザーID
+  }
+}
+'note bottom of ユーザー
+'end note
+
+
+package タスク集約 {
+  object タスク{
+    タスクID
+    担当ユーザーID
+    タスクステータス
+    延期回数
+    期日
+  }
+}
+note bottom of タスク
+  ・新規作成時は以下の状態
+  　・ステータスは未完了状態
+  　・延期回数は0
+    ・期日、タスク名は指定した値
+  ・延期は1日ずつ、3回まで実施可能
+  ・ステータスは完了にしたらもとに戻せない
+end note
+ユーザー <-l- タスク
+
+@enduml

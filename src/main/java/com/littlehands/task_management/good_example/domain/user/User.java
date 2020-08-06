@@ -4,8 +4,8 @@ import lombok.Getter;
 
 @Getter
 public class User {
-  private UserId userId;
-  private String name;
+  private final UserId userId;
+  private final String name;
   private UserStatus userStatus;
 
   public User(String name) {
