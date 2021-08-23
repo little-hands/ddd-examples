@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDate;
 
 /**
- * リファクタ後のコードは{@link com.littlehands.task_management.bad_example.usecase.task.TaskCreateUseCase}参照
+ * リファクタ前のコードは{@link com.littlehands.task_management.bad_example.usecase.task.TaskCreateUseCase}参照
  */
 @Component
 @RequiredArgsConstructor
